@@ -1,0 +1,25 @@
+1-Symfony kullanmanın avantajları nedir? Kendi cümlelerinizle açıklayınız.
+
+Daha az kod yazarak hazır kütüphanelerden kullandığımız modülleri çalıştırabiliriz.
+CSRF, XSS, SQL Injection gibi saldırılara karşı sürekli güncellenir olması ve geniş geliştirici kitlesinin olması sebebiyle güçlü bir koruma sağlar.
+CSS, JS ve Resimleri kolayca organize edebilmemiz, Doctrine ORM ve Twing motorunun hazır bulunması Symfony'i cazip kılmaktadır.
+
+2-Symfony ile environment (ortam) ayarlaması nasıl yapılır?
+
+Symfony'de varsayılan olarak 'dev' ve 'prod' olmak üzere 2 adet ortam tanımlanmıştır. 
+Uygulamamızı dev ortamında çalıştırmak istiyorsak: http://localhost:8000
+Uygulamamızı prod ortamında çalıştırmak istiyorsak: http://localhost:8000/app.php
+dev ortamı geliştiriciye çok fazla bilgi sağlaması için tasarlandığından uygulama performansını kötü etkiler. prod ortamında ise hata ayıklama bilgilerinin yanı sıra web hata ayıklama araç çubuğu da devre dışı bırakıldığı için performansı daha iyidir.
+
+3-Yeni bir Symfony projesi oluşturmak için kullanılan composer komutu nedir? Alternatif bir komutla Symfony projesi oluşturabilir miyiz?
+
+Symfony oluşturmak için şu composer komutunu kullanmamız yeterlidir; $ composer create-project symfony/skeleton projeadi
+Eğer versiyonunu da belirtmek istiyorsak şu şekilde kullanabiliriz: $ composer create-project symfony/skeleton:"^5.4" projeadi
+
+4-Laravel framework ve Symfony framework arasındaki temel farklardan iki tanesini yazınız.
+
+Symfony'deki Doctrine veritabanı tüm verileri otomatik olarak geçirir. Yazılım geliştiricilerin, gerekli verilere erişmek için depo işlevleri oluşturması gerekir.
+Laravel'de web geliştiricileri, manuel veri geçişi gerektiren Eloquent veritabanını kullanır. Veri erişimi için, veritabanları ile tüm CRUD (Oku, Güncelle, Sil) işlemlerini gerçekleştiren anlamlı söz dizimini kullanmaları gerekir.
+
+Symfony, yeniden kullanılabilir bileşenlerden oluşan ince bir koleksiyonla birlikte gelen modüler bir yapının paketlenmiş formuna dayanmaktadır. Bu, bir web uygulaması geliştirirken daha iyi modülerlik sağlar.
+Laravel'in mimarisi farklıdır. Web uygulamanızda hızlı değişiklikler yapmak istediğinizde daha kısıtlıdır. Dolayısıyla, uygulama modüllerindeki herhangi bir değişiklik, geliştiricilerin yalnızca o modülle değil, tüm kod birimiyle uğraşmaları gerektiği anlamına gelir.
